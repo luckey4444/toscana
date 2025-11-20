@@ -1,4 +1,39 @@
-/* ===== Toscana Premium Global Styles ===== */
+/* TEST: Alles deutlich verändern, damit wir sehen, dass es klappt */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1e1e1e, #050505);
+  color: #f4f4f4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+/* Navbar deutlich ändern */
+header, nav {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Call-To-Action Button oben rechts */
+header a[href^="tel"],
+nav a[href^="tel"] {
+  background: #ff4d4f;
+  color: #fff !important;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Beim Hover noch auffälliger */
+header a[href^="tel"]:hover,
+nav a[href^="tel"]:hover {
+  background: #ff6b3d;
+  transform: translateY(-2px);
+  transition: all 0.18s ease-out;
+}/* ===== Toscana Premium Global Styles ===== */
 
 /* Farbvariablen */
 :root {
