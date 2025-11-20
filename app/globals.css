@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #FFFFFF;
+  --background-warm: #FFF8F3;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --primary: #C93D2B;
+  --primary-foreground: #FFFFFF;
+  --accent-green: #4C7C48;
+  --muted: #F5F5F5;
+  --muted-foreground: #666666;
+  --border: #E5E5E5;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --background-warm: #2A2A2A;
+  --foreground: #FFFFFF;
+  --card: #252525;
+  --card-foreground: #FFFFFF;
+  --primary: #D64545;
+  --primary-foreground: #1A1A1A;
+  --accent-green: #6BA565;
+  --muted: #333333;
+  --muted-foreground: #AAAAAA;
+  --border: #333333;
+}
+
+@theme inline {
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --color-background: var(--background);
+  --color-background-warm: var(--background-warm);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent-green: var(--accent-green);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --radius: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-light;
+  }
+  h3 {
+    @apply text-xl md:text-2xl font-light;
+  }
+}
+
+body {
+  line-height: 1.6;
+}
